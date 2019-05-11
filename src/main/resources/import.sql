@@ -11,7 +11,7 @@ CREATE TABLE COUNTRIES(
 CREATE TABLE MOVIES (
   ID integer PRIMARY KEY NOT NULL,
   TITLE varchar(50),
-  RELEASE_DATE INTEGER,
+  RELEASE_DATE integer NOT NULL,
   GENRE integer NOT NULL,
   COUNTRY integer NOT NULL,
   PRICE integer,
@@ -58,15 +58,29 @@ CREATE TABLE COMMENTS (
   FOREIGN KEY (USER_EMAIL) REFERENCES USERS(EMAIL)
 );
 
-INSERT INTO GENRES VALUES (1,'Akció');
-INSERT INTO GENRES VALUES (2,'Dráma');
-INSERT INTO GENRES VALUES (3,'Kaland');
-INSERT INTO GENRES VALUES (4, 'Vígjáték');
-INSERT INTO GENRES VALUES (5, 'Sci-fi');
-INSERT INTO GENRES VALUES (6, 'Fantasy');
-INSERT INTO GENRES VALUES (7, 'Animációs');
-INSERT INTO GENRES VALUES (8, 'Dokumentum');
+INSERT INTO COUNTRIES VALUES (1, 'Amerika');
+INSERT INTO COUNTRIES VALUES (2, 'Japán');
+INSERT INTO COUNTRIES VALUES (3, 'Kína');
 
-INSERT INTO COUNTRIES VALUES(1,'Amerika');
+INSERT INTO GENRES VALUES (1, 'Akció');
+INSERT INTO GENRES VALUES (2, 'Kaland');
+INSERT INTO GENRES VALUES (3, 'Sci-fi');
+INSERT INTO GENRES VALUES (4, 'Krimi');
+INSERT INTO GENRES VALUES (5, 'Thriller');
+INSERT INTO GENRES VALUES (6, 'Dráma');
+INSERT INTO GENRES VALUES (7, 'Családi animáció');
+INSERT INTO GENRES VALUES (8, 'Horror');
+INSERT INTO GENRES VALUES (9, 'Vígjáték');
+INSERT INTO GENRES VALUES (10, 'Dokumentumfilm');
 
-INSERT INTO MOVIES VALUES(1,'Harcosok klubja',1999,6,1,1000,'https://m.media-amazon.com/images/M/MV5BMjJmYTNkNmItYjYyZC00MGUxLWJhNWMtZDY4Nzc1MDAwMzU5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,676,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('1', 'Bosszúállók', '2012', '1', '1', '2500', 'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('2', 'Az utolsó cserkész', '1992', '1', '1', '1000', 'https://m.media-amazon.com/images/M/MV5BN2QxYjAwNDUtYWIzMC00ZTg3LTg5YjMtOGM4YzAyZmUxMzI2XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,667,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('3', 'Kill Bill', '2003', '5', '1', '1500', 'https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg');
+INSERT INTO MOVIES VALUES ('4', 'Jurassic World', '2015', '2', '1', '2000', 'https://m.media-amazon.com/images/M/MV5BNzQ3OTY4NjAtNzM5OS00N2ZhLWJlOWUtYzYwZjNmOWRiMzcyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,631,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('5', 'Ezer szó', '2012', '6', '1', '1500', 'https://m.media-amazon.com/images/M/MV5BMTAzODAwODkwMjBeQTJeQWpwZ15BbWU3MDI4MDE3NDc@._V1_SY1000_CR0,0,674,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('6', 'Verdák', '2006', '7', '1', '1500', 'https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_.jpg');
+INSERT INTO MOVIES VALUES ('7', 'Godzilla', '2014', '3', '1', '2000', 'https://m.media-amazon.com/images/M/MV5BN2E4ZDgxN2YtZjExMS00MWE5LTg3NjQtNTkxMzJhOTA3MDQ4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,675,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('8', 'Központi hírszerzés', '2016', '9', '1', '2500', 'https://m.media-amazon.com/images/M/MV5BMjA2NzEzNjIwNl5BMl5BanBnXkFtZTgwNzgwMTEzNzE@._V1_SY1000_CR0,0,674,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('9', 'Az elveszett frigyláda fosztogatói', '1981', '2', '1', '1000', 'https://m.media-amazon.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SY1000_CR0,0,664,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES ('10', 'Shazam!', '2019', '1', '1', '3500', 'https://m.media-amazon.com/images/M/MV5BYTE0Yjc1NzUtMjFjMC00Y2I3LTg3NGYtNGRlMGJhYThjMTJmXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SY1000_CR0,0,674,1000_AL_.jpg');
+INSERT INTO MOVIES VALUES('11','Harcosok klubja',1999,6,1,1000,'https://m.media-amazon.com/images/M/MV5BMjJmYTNkNmItYjYyZC00MGUxLWJhNWMtZDY4Nzc1MDAwMzU5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,676,1000_AL_.jpg');
