@@ -1,0 +1,23 @@
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: black;
+  padding-top: 20px;
+}
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+$aen_green: #42A948;
+$aen_red: rgb(245, 23, 34);
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 10px solid $aen_green;
+}
+
+.ng-invalid:not(form) {
+  border-left: 10px solid $aen_red;
+}

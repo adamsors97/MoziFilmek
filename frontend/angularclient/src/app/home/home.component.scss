@@ -1,0 +1,42 @@
+body {
+  padding-top: 54px;
+  font-size: large;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+nav {
+  position: relative;
+  top: 0px;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  font-size: large;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  font-size: large;
+}
+
+.container table {
+  width: 800px;
+}
+
+.container table th {
+  width: 80px;
+  color: whitesmoke;
+  background-color: rgba(0,0,0,0.80);
+  padding: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border: 1px solid black;
+}

@@ -1,0 +1,16 @@
+
+
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+//@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+$aen_green: #42A948;
+$aen_red: rgb(245, 23, 34);
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 10px solid $aen_green;
+}
+
+.ng-invalid:not(form) {
+  border-left: 10px solid $aen_red;
+}
+

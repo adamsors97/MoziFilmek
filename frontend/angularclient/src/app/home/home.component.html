@@ -1,0 +1,60 @@
+<!--<nav class="navbar navbar-dark bg-dark">-->
+  <!--<a class="navbar-brand" href="home">MoziFilmek</a>-->
+  <!--<form class="form-inline">-->
+
+    <!--<input id="searchBar" class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">-->
+    <!--<button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="titleSearch()">Keresés</button>-->
+  <!--</form>-->
+
+<!--</nav>-->
+<body>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let movie of movies">
+          <div class="card h-100">
+            <img class="card-img-top" src={{movie.cover}} alt="" height="100" width="=100">
+            <div class="card-body">
+              <h4 class="card-title">
+                <a [routerLink]="['/movies',movie.id]" routerLinkActive="active">{{movie.title}}</a>
+              </h4>
+              <h5></h5>
+              <button class="btn btn-lg btn-outline-primary" (click)="openDialog(movie.id, content)">Bővebben</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </body>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{movie?.title}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img src={{movie?.cover}} alt="" height="500" width="400">
+    <table class="table">
+      <tbody>
+      <tr>
+        <td>Cím: </td>
+        <td>{{movie?.title}}</td>
+      </tr>
+      <tr>
+      <td>Kiadási év: </td>
+      <td>{{movie?.releasedate}}</td>
+      </tr>
+      <tr>
+        <td>Ár: </td>
+        <td>{{movie?.price}} Ft</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="modal.close('Close click')">Bezár</button>
+  </div>
+
+</ng-template>
