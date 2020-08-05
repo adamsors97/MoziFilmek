@@ -4,5 +4,5 @@ Egy film alapú weboldal, ahol film adatokat, illetve színészeket lehet megtek
 
 ## Elindítás
 Backend a MoziFilmekApplication indításával, a 8181-es porton indul el.
-Szükséges 'npm install' futtatása az angular könyvtárból (angular.json helyén), frontend futtatása 'ng serve' ugyanebből a könyvtárból.
-Az adatok betöltéséhez az import.sql script-et kell futtatni.
+Szükséges az 'npm install' sor futtatása az angular könyvtárból (angular.json helyén), frontend futtatása 'ng serve' paranccsal ugyanebből a könyvtárból.
+Az adatok betöltéséhez az import.sql nevű script-et kell futtatni.
